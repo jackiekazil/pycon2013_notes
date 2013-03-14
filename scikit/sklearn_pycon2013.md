@@ -9,11 +9,11 @@ It should be noted that the notes in this tutorial area really good, so these no
 ## Introduction notebook
 
 Classification problem & example:
-'''
+```python
 # Import the example plot from the figures directory
 from figures import plot_sgd_separator
 plot_sgd_separator()
-'''
+```
  
 Regression: 
 - We know the x & y, given x, we know what y is.
@@ -36,12 +36,14 @@ http://scipy-lectures.github.com/
 ### Matplotlib
 Some samples to note
 
+```python
 # imshow - note that origin is at the top-left!
 plt.imshow(im)
-
+```
+```python
 # imshow - note that origin is at the top-left!
 plt.imshow(im)
-
+```
 
 ## Representation and Visualization of Data (02_sklearn_data)
 - Data in scikit-learn is in 2 array. 
@@ -75,11 +77,15 @@ print (n_samples, n_features)
 - 1797 samples
 - 64 features, so 64-D
 
-
-
 - digits.data.shape == digits.images.shape
 - Uses same memory:
     - (4351602688, False)   
     - (4351602688, False)   
 
-
+#### Machine learning 
+- You need to get your data into a format from the real world that the technology can understand. This is the hardest part.
+- How example: You pick out the faces from a crowd
+    - Create a classifier to identify faces via boxes
+    - This is a face
+    - This is a pant leg
+- Features in most machine learning alogrithms has be the same length
