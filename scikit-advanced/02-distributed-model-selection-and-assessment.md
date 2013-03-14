@@ -53,3 +53,24 @@ search.boxplot_parameters(display_train=False)
 ```
 
 Results: 02-test-your-models.png
+
+
+#Distributing the Computation on EC2 Spot Instances with StarCluster
+
+- Started by MIT
+- More info: http://star.mit.edu/cluster/
+
+We require the development version for this tutorial:
+```
+pip install git+git://github.com/jtriley/StarCluster.git
+```
+
+Then update your config...       
+/home/user/.starcluster/config       
+
+Notebook has detailed notes on setting up starcluster, including how to set a price limit for each instance. 
+
+If you want to know prices... you can get the history
+```
+starcluster -r us-west-1 spothistory c1.xlarge
+```
