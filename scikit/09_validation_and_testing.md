@@ -3,16 +3,16 @@
 # Notes: Measuring Classification Performance: Validation & Testing
 
 ```python
-# Instantiate and train the classifier
-from sklearn.svm import LinearSVC
-clf = LinearSVC(loss = 'l2')
-clf.fit(X, y)
+# Instantiate and train the classifier    
+from sklearn.svm import LinearSVC    
+clf = LinearSVC(loss = 'l2')    
+clf.fit(X, y)    
 ```
 
 ```python
-# Check input vs. output labels
-y_pred = clf.predict(X)
-print (y_pred == y)
+# Check input vs. output labels    
+y_pred = clf.predict(X)    
+print (y_pred == y)    
 ```
 
 #### Problem!
