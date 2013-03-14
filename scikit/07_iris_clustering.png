@@ -1,0 +1,17 @@
+07_iris_clustering
+
+# Notes: Clustering of Iris Data
+- clustering is finding relations in the data -- things that are like each other
+
+- Use an unsupervised algorithm to pull out the clusters
+
+## K-means
+- You specify the n-clusters in the data
+- Then it established the centers of the clusters
+- For each point in the data it determines which cluster is belongs into 
+- Then is reassigned points, reassigned center, reassigns points, until it concludes
+
+### Diagrams 
+- Image in imgs
+- K-means vs True labels
+- K-means does well w/ cluster on the left, but it doesn't with the clusters on the right.
