@@ -1,3 +1,10 @@
+Notes from this tutorial:
+# An Introduction to scikit-learn: Machine Learning in Python
+Speaker: Jake Vanderplas   
+https://us.pycon.org/2013/schedule/presentation/22/   
+https://github.com/jakevdp/sklearn_pycon2013   
+
+It should be noted that the notes in this tutorial area really good, so these notes weren't really fleshed out.
 
 ## Introduction notebook
 
@@ -26,4 +33,53 @@ http://scipy-lectures.github.com/
  - Issue - slower than CSC, but flexible 
 - Know about these when you apply them to larger datasets
 
-### Matplotlib 
+### Matplotlib
+Some samples to note
+
+# imshow - note that origin is at the top-left!
+plt.imshow(im)
+
+# imshow - note that origin is at the top-left!
+plt.imshow(im)
+
+
+## Representation and Visualization of Data (02_sklearn_data)
+- Data in scikit-learn is in 2 array. 
+    - Sample data - # of samples by # of features
+
+#### Iris
+- n samples by n features 
+    - n samples is the # of Iris
+    - n features is the color, the length of pedals, pixels on the image
+
+- Target to target names
+- Data is 4-D, but often we only look at 2 at a time
+    - 4-D is the # of features -- so 4 features.
+- So we set x-index & y-index
+    -  Which features result in an interesting visualizations
+- We are doing feature selection
+    - Right now we are doing it manually, but there are tools to help you to automatically. 
+
+### Available data 
+- U can fetch from scikit
+ - datasets.fetch_
+- U can load a dataset that is already saved
+ - datasets.load_
+- Datasets are loaded into your home directory
+
+### Loading Digits Data
+n_samples, n_features = digits.data.shape   
+print (n_samples, n_features)   
+
+(1797, 64)    
+- 1797 samples
+- 64 features, so 64-D
+
+
+
+- digits.data.shape == digits.images.shape
+- Uses same memory:
+    - (4351602688, False)   
+    - (4351602688, False)   
+
+
