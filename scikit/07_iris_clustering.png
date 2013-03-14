@@ -15,3 +15,14 @@
 - Image in imgs
 - K-means vs True labels
 - K-means does well w/ cluster on the left, but it doesn't with the clusters on the right.
+
+### Comparison of clustering algorithms on toy datasets
+http://scikit-learn.org/0.13/auto_examples/cluster/plot_cluster_comparison.html
+
+## Applications of clustering
+- Building customer profiles for market analysis
+- Grouping related web news (e.g. Google News) and web search results
+- Grouping related stock quotes for investment portfolio management
+- Can be used as a preprocessing step for recommender systems
+- Can be used to build a code book of prototype samples for unsupervised feature extraction for supervised learning algorithms
+
