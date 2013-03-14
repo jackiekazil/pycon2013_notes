@@ -2,14 +2,18 @@
 
 # Notes: Measuring Classification Performance: Validation & Testing
 
+```python
 # Instantiate and train the classifier
 from sklearn.svm import LinearSVC
 clf = LinearSVC(loss = 'l2')
 clf.fit(X, y)
+```
 
+```python
 # Check input vs. output labels
 y_pred = clf.predict(X)
 print (y_pred == y)
+```
 
 #### Problem!
 - We are checking the performance of the estimator based on values that it was trained on
