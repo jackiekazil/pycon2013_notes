@@ -74,3 +74,9 @@ Issue you have --
 - training -- the more points you add, the worse it gets, because it is more eractic. 
 
 
+## Last caution
+- Train the model - usually ~60% of the data
+- Validation set - usually ~20% of the data
+- Test set - expect error of validated model -- usually ~20% of the data
+
+
