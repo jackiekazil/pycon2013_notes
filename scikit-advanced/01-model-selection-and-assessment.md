@@ -68,6 +68,70 @@ Procedut to repeat the train/test to make more accurate estimate of real est sco
 After this, you get ... 
 
 ```
-print(mean_score(test_scores))
-Mean score: 0.993 (+/-0.001)
+print(mean_score(test_scores))    
+Mean score: 0.993 (+/-0.001)    
 ```
+
+## Exercise
+
+## Model Selection with Grid Search
+- img - gammas in train & test scores
+- sweet spot region for gamma around $10^4$ to $10^3$
+    - gamma is too low, train score is low
+    - gamma is too high
+    - overfitting regime
+
+- If c is too low, then the model will be overfitting. 
+- When you over train c, the model can not overfit. 
+
+
+
+### Which are the best values of C & gamma?    
+```
+from sklearn.grid_search import GridSearchCV    
+...    
+gs_svc.best_params_, gs_svc.best_score_    
+({'C': 1.0, 'gamma': 0.001}, 0.9659957194045643)    
+```
+
+Note: helper function that is in notebook is not in scikit, however stuff like this will be added in the future. 
+
+Q: Is the question determistic? 
+A: yes. Grid search takes a long time & gives evaluations by the order you provide it.
+
+```
+display_grid_scores(gs_svc.grid_scores_, top=20)    
+```
+
+Stars in the result are there to mark overlap w/ standard error
+```
+C=1.0, gamma=0.001: 0.966 (+/-0.009) *      
+C=10.0, gamma=0.001:    0.966 (+/-0.002) *      
+C=100.0, gamma=0.001:   0.966 (+/-0.002) *      
+C=10.0, gamma=0.0001:   0.966 (+/-0.008) *      
+C=100.0, gamma=0.0001:  0.962 (+/-0.007) *      
+C=1.0, gamma=0.0001:    0.922 (+/-0.003)      
+C=0.1, gamma=0.001: 0.722 (+/-0.008)      
+C=10.0, gamma=0.01: 0.314 (+/-0.018)      
+... more
+```
+
+No time for the exercise. :-(
+
+## Plotting Learning Curves for Bias-Variance analysis
+
+### learning curves
+- understand the behavior of model
+- run several cross validation steps for various random sub-samples of the training set 
+- plot the mean training and test errors
+- imgs/01-train-set-test-scores-learning-curve.png
+    - When you have few data, the model overfits
+    - When you have more data, you have less overfitting, but you have slight underfitting, b/c your train score is no longer 100%
+- plotting learning curves is another way to understand how the model is working
+
+#### What does the img mean?
+- if training set error is high --> high bias 
+    - underfit training set.
+- if testing set error is sig larger than the training set error --> 
+    - model has high variance
+    - overfit the training set
