@@ -40,9 +40,11 @@ You can see a mmap file in the directory:
 Return value:      
 -rw-rw-r--  1 jakopanda  staff    40B Mar 14 15:37 small.mmap
 
+
 ----
-:: person break :: 
+personal break
 ----
+
 
 #A More Complete Parallel Model Selection and Assessment Example
 
